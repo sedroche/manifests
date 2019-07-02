@@ -39,6 +39,10 @@ spec:
               type: string
             selfSignedCerts:
               type: boolean
+            routingSubdomain:
+              type: string
+            masterUrl:
+              type: string
           required:
             - type
         status:

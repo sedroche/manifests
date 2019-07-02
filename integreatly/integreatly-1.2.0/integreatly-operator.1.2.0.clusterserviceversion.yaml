@@ -66,7 +66,7 @@ spec:
                 - "*"
               verbs:
                 - "*"
-# This is used to allow the operator to setup the ns needed for each product
+            # This is used to allow the operator to setup the ns needed for each product
             - apiGroups:
                 - ""
               resources:
@@ -78,7 +78,7 @@ spec:
                 - watch
                 - get
                 - update
-# This is used to allow the operator to setup catalog source config and remove it if needed.
+            # This is used to allow the operator to setup catalog source config and remove it if needed.
             - apiGroups:
                 - operators.coreos.com
               resources:
@@ -164,18 +164,38 @@ spec:
                 - watch
                 - get
             - apiGroups:
-              - admin.enmasse.io
+                - admin.enmasse.io
               resources:
-              - authenticationservices
-              - addressplans
-              - addressspaceplans
-              - brokeredinfraconfigs
-              - standardinfraconfigs
+                - authenticationservices
+                - addressplans
+                - addressspaceplans
+                - brokeredinfraconfigs
+                - standardinfraconfigs
               verbs:
-              - list
-              - create
-              - watch
-              - get
+                - list
+                - create
+                - watch
+                - get
+            - apiGroups:
+                - oauth.openshift.io
+              resources:
+                - oauthclients
+              verbs:
+                - create
+                - get
+            - apiGroups:
+                - ''
+              resources:
+                - configmaps
+              verbs:
+                - get
+                - update
+            - apiGroups:
+                - apps.openshift.io
+              resources:
+                - deploymentconfigs/instantiate
+              verbs:
+                - create
       permissions:
         - serviceAccountName: integreatly-operator
           rules:
