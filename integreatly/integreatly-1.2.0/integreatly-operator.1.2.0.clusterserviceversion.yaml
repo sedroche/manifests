@@ -197,6 +197,14 @@ spec:
                 - deploymentconfigs/instantiate
               verbs:
                 - create
+            - apiGroups:
+                - ""
+              resources:
+                - secrets
+              verbs:
+                - get
+                - create
+                - update
       permissions:
         - serviceAccountName: integreatly-operator
           rules:
