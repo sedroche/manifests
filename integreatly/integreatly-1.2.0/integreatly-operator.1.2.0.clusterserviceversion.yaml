@@ -171,6 +171,7 @@ spec:
                 - addressspaceplans
                 - brokeredinfraconfigs
                 - standardinfraconfigs
+                - consoleservices
               verbs:
                 - list
                 - create
