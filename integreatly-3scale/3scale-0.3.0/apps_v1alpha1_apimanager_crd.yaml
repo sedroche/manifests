@@ -90,9 +90,9 @@ spec:
                         awsRegion:
                           type: string
                       required:
-                        - awsBucket
-                        - awsRegion
-                        - awsCredentialsSecret
+                      - awsBucket
+                      - awsRegion
+                      - awsCredentialsSecret
                       type: object
                     persistentVolumeClaim:
                       description: Union type. Only one of the fields can be set.
@@ -120,7 +120,7 @@ spec:
                   type: string
               type: object
           required:
-            - wildcardDomain
+          - wildcardDomain
           type: object
         status:
           properties:
@@ -132,8 +132,8 @@ spec:
                   type:
                     type: string
                 required:
-                  - type
-                  - status
+                - type
+                - status
                 type: object
               type: array
             deployments:
@@ -156,10 +156,10 @@ spec:
                   type: array
               type: object
           required:
-            - deployments
+          - deployments
           type: object
   version: v1alpha1
   versions:
-    - name: v1alpha1
-      served: true
-      storage: true
+  - name: v1alpha1
+    served: true
+    storage: true
